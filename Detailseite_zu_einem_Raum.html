@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Web-Anwendung</title>
+    <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div id="logo"><img src="logo.png" alt="Logo"></div>
+    <div id="navmenu">
+      <div><a href="verfuegbare_Raeume.html" style="text-decoration:none">Liste der verfügbaren Räume </a></div>
+  		<div><a href="Detailseite_zu_einem_Raum.html" style="text-decoration:none">Detailseite zu einem Raum</a></div>
+  		<div><a href="Detailseite_zur_Buchung.html" style="text-decoration:none">Detailseite zur Buchung</a></div>
+  		<div><a href="Anlegen_einer_neuen_Raumbuchung.html" style="text-decoration:none">Anlegen einer neuen Raumbuchung</a></div>
+    </div>
+	</nav>
+	<header><h1>Detailseite zu einem Raum</h1></header>
+  <main>
+    <div id ="raum_1">
+  		<ol>
+  			<li><h3>Information zum Raum A.E.01</h3>
+  				<div>
+  					<figure>
+  						<img src="AE01.jpg" width="350" height="250" alt="Raum A.E.01">
+  						<figcaption>
+  							<i>Raum A.E.01, Emil Figge Straße 42</i>
+  						</figcaption>
+  					</figure>
+  				</div>
+          <div class="contentblock">
+    				<ul>
+    					<li>Bezeichnung: Hörsaal</li>
+    					<li>Gebäude: EF 42</li>
+    					<li>Kapazität: 200</li>
+    					<li>Ausstattungsmerkmale:
+    						<ul>
+    							<li>3 Beamer</li>
+    							<li>3 Leinwände</li>
+    							<li>1 Lichtbildwand mit Motorantrieb</li>
+    							<li>12 Deckenlautsprecher</li>
+    							<li>6 Funkmikrofonset</li>
+    						</ul>
+    					</li>
+    				</ul>
+          </div>
+  			</li>
+  			<li><h3>Liste der Buchung zum Raum</h3>
+  				<table class="raum_list">
+  					<thead>
+  						<tr>
+  							<th> Datum </th>
+  							<th> Zeitraum </th>
+  							<th> Bezeichnung </th>
+  						</tr>
+  					</thead>
+  					<tbody>
+  						<tr>
+  							<td> 2.11.2018 </td>
+  							<td> 17 Uhr - 18:30 Uhr </td>
+  							<td><a href="Detailseite_zur_Buchung.html#raum_1a">Miniklausur Analysis 1</a></td>
+  						</tr>
+  						<tr>
+  							<td> 3.11.2018 </td>
+  							<td> 10:15 Uhr - 11:50 Uhr </td>
+  							<td><a href="Detailseite_zur_Buchung.html#raum_1b">Vorlesung SWT 1</a></td>
+  						</tr>
+  					</tbody>
+  				</table>
+  			</li>
+  		</ol>
+  	</div>
+  	<br><hr>
+  	<div id ="raum_2">
+  		<ol>
+  			<li><h3>Information zum Raum A.1.02</h3>
+  				<div>
+  					<figure>
+  						<img src="A102.jpg" width="350" height="250" alt="Raum A102">
+  						<figcaption>
+  							<i>Raum A.1.02, Sonnenstraße 96</i>
+  						</figcaption>
+  					</figure>
+  				</div>
+  				<div class="contentblock">
+  					<ul>
+  						<li>Bezeichnung: Besprechungsraum</li>
+  						<li>Gebäude: SON 96</li>
+  						<li>Kapazität: 52</li>
+  						<li>Ausstattungsmerkmale:
+  							<ul>
+  								<li>1 Beamer</li>
+  								<li>1 Leinwand</li>
+  								<li>1 Flexoboard Schreibtafel</li>
+  								<li>1 Flipchat</li>
+  								<li>Lautsprecher</li>
+  							</ul>
+  						</li>
+  					</ul>
+  				</div>
+  			</li>
+  			<li><h3>Liste der Buchung zum Raum</h3>
+  				<table class="raum_list">
+  					<thead>
+  						<tr>
+  							<th> Datum </th>
+  							<th> Zeitraum </th>
+  							<th> Bezeichnung </th>
+  						</tr>
+  					</thead>
+  					<tbody>
+  						<tr>
+  							<td> 9.11.2018 </td>
+  							<td> 9:30 Uhr - 13:30 Uhr </td>
+  							<td><a href="Detailseite_zur_Buchung.html#raum_2a">Workshop zum Thema Blockchain</a></td>
+  						</tr>
+  						<tr>
+  							<td> 12.11.2018 </td>
+  							<td> 12 Uhr - 15 Uhr </td>
+  							<td><a href="Detailseite_zur_Buchung.html#raum_2b">Gastvortrag zu NoSQL-Datenbanken & Data Streaming Analytics</a></td>
+  						</tr>
+  					</tbody>
+  				</table>
+  			</li>
+  		</ol>
+  	</div>
+  	<br><hr>
+  	<div id ="raum_3">
+  		<ol>
+  			<li><h3>Information zum Raum F.2.12</h3>
+  				<div>
+  					<figure>
+  						<img src="F212.jpg" width="350" height="250" alt="Raum F212">
+  						<figcaption>
+  							<i>Raum F.2.12, Sonnenstraße 96</i>
+  						</figcaption>
+  					</figure>
+  				</div>
+  			  <div class="contentblock">
+  					<ul>
+  						<li>Bezeichnung: Seminarraum</li>
+  						<li>Gebäude: SON 96</li>
+  						<li>Kapazität: 48</li>
+  						<li>Ausstattungsmerkmale:
+  							<ul>
+  								<li>2 Beamer</li>
+  								<li>1 Verstärker</li>
+  								<li>1 Funkmikrofonset</li>
+  								<li>Lautsprecher</li>
+  								<li>4 Metaplanwände</li>
+  							</ul>
+  						</li>
+  					</ul>
+  				</div>
+  			</li>
+  			<li><h3>Liste der Buchung zum Raum</h3>
+  				<table>
+  					<thead>
+  						<tr>
+  							<th> Datum </th>
+  							<th> Zeitraum </th>
+  							<th> Bezeichnung </th>
+  						</tr>
+  					</thead>
+  					<tbody>
+  						<tr>
+  							<td> - </td>
+  							<td> - </td>
+  							<td> - </td>
+  						</tr>
+  						<tr>
+  							<td> - </td>
+  							<td> - </td>
+  							<td> - </td>
+  						</tr>
+  					</tbody>
+  				</table>
+  			</li>
+  		</ol>
+  	</div>
+  	<br><hr>
+  	<div id ="raum_4">
+  		<ol>
+  			<li><h3>Information zum Raum C.1.31</h3>
+  				<div>
+  					<figure>
+  						<img src="C131.jpg" width="350" height="250" alt="Raum C1.31">
+  						<figcaption>
+  							<i>Raum C.1.31, Emil Figge Straße 42 </i>
+  						</figcaption>
+  					</figure>
+  				</div>
+  				<div class="contentblock">
+  					<ul>
+  						<li>Bezeichnung: Computerraum</li>
+  						<li>Gebäude: EF 42</li>
+  						<li>Kapazität: 30</li>
+  						<li>Ausstattungsmerkmale:
+  							<ul>
+  								<li>1 Beamer</li>
+  								<li>1 Projektionswand</li>
+  								<li>2 Frontlautsprecher</li>
+  								<li>1 Flexoboard Flipchart</li>
+  								<li>30 PCs mit Internetzugang</li>
+  							</ul>
+  						</li>
+  					</ul>
+  				</div>
+  			</li>
+  			<li><h3>Liste der Buchung zum Raum</h3>
+  				<table>
+  					<thead>
+  						<tr>
+  							<th> Datum </th>
+  							<th> Zeitraum </th>
+  							<th> Bezeichnung </th>
+  						</tr>
+  					</thead>
+  					<tbody>
+  						<tr>
+  							<td> - </td>
+  							<td> - </td>
+  							<td> - </td>
+  						</tr>
+  						<tr>
+  							<td> - </td>
+  							<td> - </td>
+  							<td> - </td>
+  						</tr>
+  					</tbody>
+  				</table>
+  			</li>
+  		</ol>
+  	</div>
+  	<br><hr>
+  	<div id ="raum_5">
+  		<ol>
+  			<li><h3>Information zum Raum B.3.80</h3>
+  				<div>
+  					<figure>
+  						<img src="R380.jpg" width="350" height="250" alt="Raum 380">
+  						<figcaption>
+  							<i>Raum B.3.80, Emil Figge Straße 44 </i>
+  						</figcaption>
+  					</figure>
+  				</div>
+  				<div class="contentblock">
+  					<ul>
+  						<li>Bezeichnung: Seminarraum</li>
+  						<li>Gebäude: EF 44</li>
+  						<li>Kapazität: 32</li>
+  						<li>Ausstattungsmerkmale:
+  							<ul>
+  								<li>1 Beamer</li>
+  								<li>1 Leinwand</li>
+  								<li>Lautsprecher</li>
+  							</ul>
+  						</li>
+  					</ul>
+  				</div>
+  			</li>
+  			<li><h3>Liste der Buchung zum Raum</h3>
+  				<table>
+  					<thead>
+  						<tr>
+  							<th> Datum </th>
+  							<th> Zeitraum </th>
+  							<th> Bezeichnung </th>
+  						</tr>
+  					</thead>
+  					<tbody>
+  						<tr>
+  							<td> - </td>
+  							<td> - </td>
+  							<td> - </td>
+  						</tr>
+  						<tr>
+  							<td> - </td>
+  							<td> - </td>
+  							<td> - </td>
+  						</tr>
+  					</tbody>
+  				</table>
+  			</li>
+  		</ol>
+  	</div>
+  </main>
+  <hr>
+  <aside>
+    <h3>*** Zusatzinformationen</h3>
+    <ul>
+      <li><i>Info 1</i></li>
+      <li><i>Info 2</i></li>
+      <li><i>Info 3</i></li>
+    </ul>
+  </aside>
+
+	<footer><em>&copy; Copyright 2018 </em></footer>
+
+</body>
+</html>

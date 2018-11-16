@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Web-Anwendung</title>
+	  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<nav>
+    <div id="logo"><img src="logo.png" alt="Logo"></div>
+    <div id="navmenu">
+      <div><a href="verfuegbare_Raeume.html" style="text-decoration:none">Liste der verfügbaren Räume </a></div>
+  		<div><a href="Detailseite_zu_einem_Raum.html" style="text-decoration:none">Detailseite zu einem Raum</a></div>
+  		<div><a href="Detailseite_zur_Buchung.html" style="text-decoration:none">Detailseite zur Buchung</a></div>
+  		<div><a href="Anlegen_einer_neuen_Raumbuchung.html" style="text-decoration:none">Anlegen einer neuen Raumbuchung</a></div>
+    </div>
+	</nav>
+  <header>
+    <h1>Liste der verfügbaren Räume</h1>
+  </header>
+	<main>
+    <form action="http://172.22.160.210/roomReservationService/testRoomSearch.php" method="get">
+  		<fieldset>
+  			<legend><label for="roomno"> Raumdetail </label></legend>
+  			<span class="required"><input list="findenliste" name="roomno" id="roomno"	pattern="[A-Z][\.][E|1-3]{1}[\.][\d]{2}" maxlength="6" required></span>
+  			<datalist id="findenliste">
+  				<option value="A.E.01">
+  				<option value="A.1.02">
+  				<option value="F.2.12">
+  				<option value="C.1.31">
+  				<option value="B.3.80">
+  			</datalist>
+  		</fieldset>
+  		<fieldset>
+  			<input type="submit" value="Finden">
+  		</fieldset>
+  	</form>
+  	<div>
+  		<ol>
+  			<li><a href="Detailseite_zu_einem_Raum.html#raum_1"> Raum A.E.01</a>
+  				<ul>
+  					<li>Hörsaal</li>
+  					<li>EF 42</li>
+  				</ul>
+  			</li>
+  			<li><a href="Detailseite_zu_einem_Raum.html#raum_2"> Raum A.1.02</a>
+  				<ul>
+  					<li>Besprechungsraum</li>
+  					<li>SON 96</li>
+  				</ul>
+  			</li>
+  			<li><a href="Detailseite_zu_einem_Raum.html#raum_3"> Raum F.2.12</a>
+  				<ul>
+  					<li>Seminarraum</li>
+  					<li>SON 96</li>
+  				</ul>
+  			</li>
+  			<li><a href="Detailseite_zu_einem_Raum.html#raum_4"> Raum C.1.31</a>
+  				<ul>
+  					<li>Computerraum</li>
+  					<li>EF 42</li>
+  				</ul>
+  			</li>
+  			<li><a href="Detailseite_zu_einem_Raum.html#raum_5"> Raum B.3.80</a>
+  				<ul>
+  					<li>Seminarraum</li>
+  					<li>EF 44</li>
+  				</ul>
+  			</li>
+  		</ol>
+  	</div>
+  </main>
+  <hr>
+  <aside>
+    <h3>*** Zusatzinformationen</h3>
+    <ul>
+      <li><i>Info 1</i></li>
+      <li><i>Info 2</i></li>
+      <li><i>Info 3</i></li>
+    </ul>
+  </aside>
+
+	<footer><em>&copy; Copyright 2018 </em></footer>
+
+</body>
+</html>
