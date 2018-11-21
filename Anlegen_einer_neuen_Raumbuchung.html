@@ -21,50 +21,73 @@
 		<h1>Anlegen einer neuen Raumbuchung</h1>
 	</header>
 	<br>
-	<main>
-		<form action="http://172.22.160.210/roomReservationService/testCreateReservation.php" method="post">
+	<main class="hauptmain">
+		<form id="raumbuchung_anlegen" action="http://172.22.160.210/roomReservationService/testCreateReservation.php" method="post">
 			<fieldset>
-				<legend>Einen Raum anlegen</legend>
-
-				<div id="container">
-					<div id="item1"><label for="roomno">Raumnummer: </label></div>
-					<div id="item2">
-						<input list="roomnolist" id="roomno" name="roomno" pattern="[A-Z]\.[E|1-3]\.[\d]{2}" maxlength="6" required autofocus>
-						<datalist id="roomnolist">
-							<option value="A.E.01">A.E.01</option>
-							<option value="A.1.02">A.1.02</option>
-							<option value="F.2.12">F.2.12</option>
-							<option value="C.1.31">C.1.31</option>
-							<option value="B.3.80">B.3.80</option>
-						</datalist>
-					</div>
-					<div id="item3"><label for="restitle">Bezeichnung der Buchung: </label></div>
-					<div id="item4"><span class="required"><input type="text" id="restitle" name="restitle" size="20" maxlength="20" required></span></div>
-					<div id="item5"><label for="resdate">Datum der Buchung: </label></div>
-					<div id="item6"><span class="required"><input type="date" id="resdate" name="resdate" size="10" required></span></div>
-					<div id="item7"><label for="resstart">Zeitraum: </label></div>
-					<div id="item8">
-						<span class="required"><input type="time" id="resstart" name="resstart" min="8:00" max="21:00" required></span>
-						<span class="required"><input type="time" name="resend" min="8:00" max="21:59" required></span>
-					</div>
-					<div id="item9"><label for="resparticipants">Erwartete Anzahl Teilnehmer: </label></div>
-					<div id="item10"><input type="text" id="resparticipants" name="resparticipants"></div>
-					<div id="item11"><label for="resperson">Buchende Person: </label></div>
-					<div id="item12">
-						<input list="respersonlist" id="resperson">
-						<datalist id="respersonlist">
-							<option value="Prof. Dr. Stark" >Prof. Dr. Stark</option>
-							<option value="Prof. Dr. Fühner">Prof. Dr. Fühner</option>
-							<option value="Prof. Dr. Cleven">Prof. Dr. Cleven</option>
-							<option value="Prof. Dr. Sachweh">Prof. Dr. Sachweh</option>
-							<option value="Prof. Dr. Schuster">Prof. Dr. Schuster</option>
-							<option value="Prof. Dr. Jörges">Prof. Dr. Jörges</option>
-							<option value="Dr. Frenkel">Dr. Frenkel</option>
-							<option value="Dr. Harrer">Dr. Harrer</option>
-						</datalist>
-					</div>
-					<div id="item13"><label for="resdescription">Beschreibung der Buchung: </label></div>
-					<div id="item14"><textarea id="resdescription" cols="50" rows="5" name="resdescription" placeholder="z. B. Seminarraum" maxlength="500"></textarea></div>
+				<legend>Raumnummer</legend>
+				<div class="anlegen_raumbuchung_teil">
+					<label for="roomno">Raumnummer: </label>
+					<input list="roomnolist" id="roomno" name="roomno" pattern="[A-Z]\.[E|1-3]\.[\d]{2}" maxlength="6" required autofocus>
+					<datalist id="roomnolist">
+						<option value="A.E.01">A.E.01</option>
+						<option value="A.1.02">A.1.02</option>
+						<option value="F.2.12">F.2.12</option>
+						<option value="C.1.31">C.1.31</option>
+						<option value="B.3.80">B.3.80</option>
+					</datalist>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Bezeichnung der Buchung</legend>
+				<div class="anlegen_raumbuchung_teil">
+					<label for="restitle">Bezeichnung der Buchung: </label>
+					<span class="required"><input type="text" id="restitle" name="restitle" size="20" maxlength="20" required></span>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Datum der Buchung</legend>
+				<div class="anlegen_raumbuchung_teil">
+					<label for="resdate">Datum der Buchung: </label>
+					<span class="required"><input type="date" id="resdate" name="resdate" size="10" required></span>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Zeitraum</legend>
+				<div class="anlegen_raumbuchung_teil">
+					<label for="resstart">Zeitraum: </label>
+					<span class="required"><input type="time" id="resstart" name="resstart" min="8:00" max="21:00" required></span>
+					<span class="required"><input type="time" name="resend" min="8:00" max="21:59" required></span>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Erwartete Anzahl Teilnehmer</legend>
+				<div class="anlegen_raumbuchung_teil">
+					<label for="resparticipants">Erwartete Anzahl Teilnehmer: </label>
+					<input type="text" id="resparticipants" name="resparticipants">
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Buchende Person</legend>
+				<div class="anlegen_raumbuchung_teil">
+					<label for="resperson">Buchende Person: </label>
+					<input list="respersonlist" id="resperson">
+					<datalist id="respersonlist">
+						<option value="Prof. Dr. Stark" >Prof. Dr. Stark</option>
+						<option value="Prof. Dr. Fühner">Prof. Dr. Fühner</option>
+						<option value="Prof. Dr. Cleven">Prof. Dr. Cleven</option>
+						<option value="Prof. Dr. Sachweh">Prof. Dr. Sachweh</option>
+						<option value="Prof. Dr. Schuster">Prof. Dr. Schuster</option>
+						<option value="Prof. Dr. Jörges">Prof. Dr. Jörges</option>
+						<option value="Dr. Frenkel">Dr. Frenkel</option>
+						<option value="Dr. Harrer">Dr. Harrer</option>
+					</datalist>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Beschreibung der Buchung</legend>
+				<div class="anlegen_raumbuchung_teil">
+					<label for="resdescription">Beschreibung der Buchung: </label>
+					<textarea id="resdescription" cols="50" rows="3" name="resdescription" placeholder="z. B. Seminarraum" maxlength="500"></textarea>
 				</div>
 			</fieldset>
 			<fieldset>

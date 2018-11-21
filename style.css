@@ -5,6 +5,19 @@ body {
   background-color: rgb(255, 253, 208);
   margin-top: -30px;
 }
+.hauptmain {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin: -20px 20px 20px 20px;
+}
+#inhalt {
+  flex: 1 1 auto;
+}
+#suchform {
+  width: 4 0 50%;
+}
 h1 {
   color: white;
   background: rgb(220,160,140);
@@ -25,12 +38,13 @@ input:hover {
   background: rgb(193, 234, 251);
 }
 aside {
-  color:rgb(157, 56, 62);
+  color:rgb(17, 102, 30);
   padding: 3px;
   margin: 3px;
   border-style: dashed;
   border-width: 2px;
 }
+footer { color: rgb(164, 39, 152)}
 :visited{
   text-decoration: none;
   color: rgb(122, 10, 24);
@@ -65,13 +79,16 @@ nav {
 table, td, th {
     border: 1px solid black;
     border-collapse: collapse;
-    table-layout: fixed; width: 60%;
+    column-width: auto;
+    line-height: 22px;
+    padding: 10px;
 }
 thead {
   background: rgb(237, 197, 233);
   color: green;
+  text-align: center;
 }
-tbody tr:nth-child(odd){
+tr:nth-child(even){
   background: rgb(240, 151, 113);
 }
 .email::before {
@@ -82,36 +99,6 @@ tbody tr:nth-child(odd){
 .required::after {
   content: " (erforderliche Eingabe)";
 }
-
-#container {
-  display: grid;
-  padding: 10px;
-  grid-template-columns: 250px;
-  grid-template-rows: 30px 30px 30px 30px 30px 30px 30px;
-  grid-template-areas: "area1  area2"
-                       "area3  area4"
-                       "area5  area6"
-                       "area7  area8"
-                       "area9  area10"
-                       "area11 area12"
-                       "area13 area14"
-                       ".      area14";
-}
-#item1 { grid-area: area1;}
-#item2 { grid-area: area2;}
-#item3 { grid-area: area3;}
-#item4 { grid-area: area4;}
-#item5 { grid-area: area5;}
-#item6 { grid-area: area6;}
-#item7 { grid-area: area7;}
-#item8 { grid-area: area8;}
-#item9 { grid-area: area9;}
-#item10 { grid-area: area10;}
-#item11 { grid-area: area11;}
-#item12 { grid-area: area12;}
-#item12 { grid-area: area12;}
-#item13 { grid-area: area13;}
-#item14 { grid-area: area14;}
 
 fieldset {
   margin: 5px;
@@ -136,4 +123,15 @@ header {
 #raum_1a, #raum_1b, #raum_2a, #raum_2b {
   border-left: 3px solid rgb(79, 10, 134);
   margin-left: 10px;
+}
+#raumbuchung_anlegen {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+.anlegen_raumbuchung_teil {
+  display: flex;
+}
+.anlegen_raumbuchung_teil > * {
+   flex: 1px;
 }

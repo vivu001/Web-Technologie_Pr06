@@ -20,24 +20,8 @@
   <header>
     <h1>Liste der verfügbaren Räume</h1>
   </header>
-	<main>
-    <form action="http://172.22.160.210/roomReservationService/testRoomSearch.php" method="get">
-  		<fieldset>
-  			<legend><label for="roomno"> Raumdetail </label></legend>
-  			<span class="required"><input list="findenliste" name="roomno" id="roomno"	pattern="[A-Z][\.][E|1-3]{1}[\.][\d]{2}" maxlength="6" required></span>
-  			<datalist id="findenliste">
-  				<option value="A.E.01">
-  				<option value="A.1.02">
-  				<option value="F.2.12">
-  				<option value="C.1.31">
-  				<option value="B.3.80">
-  			</datalist>
-  		</fieldset>
-  		<fieldset>
-  			<input type="submit" value="Finden">
-  		</fieldset>
-  	</form>
-  	<div>
+	<main class="hauptmain">
+  	<div id="inhalt">
   		<ol>
   			<li><a href="Detailseite_zu_einem_Raum.html#raum_1"> Raum A.E.01</a>
   				<ul>
@@ -71,6 +55,22 @@
   			</li>
   		</ol>
   	</div>
+    <form id="suchform" action="http://172.22.160.210/roomReservationService/testRoomSearch.php" method="get">
+  		<fieldset>
+  			<legend><label for="roomno"> Raumdetail </label></legend>
+  			<span class="required"><input list="findenliste" name="roomno" id="roomno"	pattern="[A-Z][\.][E|1-3]{1}[\.][\d]{2}" maxlength="6" required></span>
+  			<datalist id="findenliste">
+  				<option value="A.E.01">
+  				<option value="A.1.02">
+  				<option value="F.2.12">
+  				<option value="C.1.31">
+  				<option value="B.3.80">
+  			</datalist>
+  		</fieldset>
+      <fieldset>
+  		  <input type="submit" value="Finden">
+      </fieldset>
+  	</form>
   </main>
   <hr>
   <aside>
@@ -81,7 +81,7 @@
       <li><i>Info 3</i></li>
     </ul>
   </aside>
-
+  <br><br>
 	<footer><em>&copy; Copyright 2018 </em></footer>
 
 </body>
